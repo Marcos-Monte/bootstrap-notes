@@ -1,45 +1,44 @@
 <template>
-  <div id="app">
+  <!-- 'b-container' ou div com a class '.container', define se estamos usando o bootstrap ou bootstrapvue -->
+  <b-container fluid="md" class="d-flex flex-column justify-content-start p-0" id="app">
+    <Header />
+  <!-- <div class="container-md" id="app"> -->
     <!-- Elemento, boostrapvue, de tabela que recebe a props indicando se os elementos mostrados serão ativos ou os inativos -->
-    <Table 
-      :isActives="isActives"
+    <!-- <Table /> -->
+
+    <component 
+      :is="componente"
     />
-    <!-- Alterna entre os registros ativos e inativos via click -->
-    <b-button :variant="isActives?'primary':'warning'" @click="handleChangeActives()">
 
-      <!-- Valor alternado via click no botão -->
-      Registros {{ isActives? 'Ativos': 'Inativos' }}
+  <!-- </div> -->
+  </b-container>
 
-    </b-button>
-  </div>
 </template>
 
 <script>
 // Import de componente
 import Table from '@/components/Table.vue';
+
+import Header from './components/Header.vue';
+
 export default {
   // Registros de Componente
-  components: {Table},
+  components: {Table, Header},
   
   name: 'App',
 
   data(){
     return {
-      isActives: true,
+      // isActives: true,
+      componente: Table
     }
   },
-
-  methods: {
-    // Alterna entre 'true e false' o valor da variavel 'isActives'
-    handleChangeActives(){
-      // console.log(this.isActives)
-      return this.isActives = !this.isActives
-    }
-  }
 
 }
 </script>
 
 <style>
-
+ #app{
+  height: 100vh;
+ }
 </style>
