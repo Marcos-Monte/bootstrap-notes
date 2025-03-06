@@ -45,7 +45,9 @@
 </template>
 
 <script> 
-import { items } from '@/data/registros';
+import axios from 'axios';
+
+// import { items } from '@/data/registros';
 export default {
     name: 'TableVue',
 
@@ -63,7 +65,7 @@ export default {
                 { key: 'cpf', sortable: true },
             ],
 
-            itemsTable: items,
+            itemsTable: [],
             
         };
     },
@@ -86,9 +88,28 @@ export default {
     handleChangeActives(){
       // console.log(this.isActives)
         return this.isActives = !this.isActives
+    },
+
+    async fetchItems(){
+        try{
+            const response = await axios.get(
+                `http://localhost:4000/api/items`
+            )
+
+            this.itemsTable = response
+
+        } catch(error){
+            console.error('Erro ao buscar os registros ', error)
         }
     }
 
+    
+    },
+
+    mounted(){
+
+        this.fetchItems()
+    }
 
 };
 </script>
