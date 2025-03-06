@@ -1,11 +1,13 @@
 <template>
+    <!-- Container Principal do NavBar -->
+    <b-navbar class="d-flex justify-content-between" toggleable="sm" type="dark" variant="danger">
+        <!-- Titulo ou Logo da Aplicação -->
+        <b-navbar-brand href="#">Bootstrap + Vue</b-navbar-brand>
 
-    <b-navbar class="d-flex justify-content-between" toggleable="md" type="dark" variant="danger">
-
-        <b-navbar-brand href="#">Navegação</b-navbar-brand>
-
+        <!-- Menu hamburguer da versão mobile -->
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
+        <!-- Links -->
         <b-collapse class="justify-content-end" id="nav-collapse" is-nav>
             <b-navbar-nav>
                 <b-nav-item to="/" tag="router-link">Grid</b-nav-item>

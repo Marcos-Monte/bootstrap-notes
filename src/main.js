@@ -3,6 +3,7 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'; // Necessários para 
 import Vue from 'vue';
 import App from './App.vue';
 
+// Import de Plugins
 import router from './router';
 
 // Import de Estilos do Bootstrap-vue
