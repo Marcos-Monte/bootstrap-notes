@@ -13,6 +13,7 @@
             <b-navbar-nav>
                 <b-nav-item class="d-flex justify-content-center" to="/" tag="router-link">Grid</b-nav-item>
                 <b-nav-item class="d-flex justify-content-center" to="/table" tag="router-link">B-Table</b-nav-item>
+                <b-nav-item class="d-flex justify-content-center" to="/apitable" tag="router-link">Api-Table</b-nav-item>
             </b-navbar-nav>
         </b-collapse>
 

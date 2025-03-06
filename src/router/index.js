@@ -1,15 +1,16 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+import ApiTable from '@/components/ApiTable.vue';
 import Home from "@/components/Home.vue";
 import Table from "@/components/Table.vue";
-// import { component } from "vue/types/umd";
 
 Vue.use(VueRouter);
 
 const routes = [
     {path: '/', component: Home},
     {path: '/table', component: Table},
+    {path: '/apitable', component: ApiTable},
 ]
 
 const router = new VueRouter({
