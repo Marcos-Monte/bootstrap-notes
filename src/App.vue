@@ -6,9 +6,7 @@
     <!-- Elemento, boostrapvue, de tabela que recebe a props indicando se os elementos mostrados serão ativos ou os inativos -->
     <!-- <Table /> -->
 
-    <component 
-      :is="componente"
-    />
+    <router-view></router-view>
 
   <!-- </div> -->
   </b-container>
@@ -17,22 +15,13 @@
 
 <script>
 // Import de componente
-import Table from '@/components/Table.vue';
-
 import Header from './components/Header.vue';
 
 export default {
   // Registros de Componente
-  components: {Table, Header},
+  components: { Header},
   
   name: 'App',
-
-  data(){
-    return {
-      // isActives: true,
-      componente: Table
-    }
-  },
 
 }
 </script>
