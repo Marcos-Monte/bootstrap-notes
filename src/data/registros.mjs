@@ -13,4 +13,4 @@ const items= [ // Array de objetos
     { isActive: false, age: 89, first_name: 'Nixdorf', last_name: 'Wilson' },
 ]
 
-export { items };
+export default  items ;
