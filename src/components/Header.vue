@@ -1,6 +1,6 @@
 <template>
     <!-- Container Principal do NavBar -->
-    <b-navbar class="d-flex justify-content-between" toggleable="sm" type="dark" variant="danger">
+    <b-navbar class="d-flex justify-content-between" toggleable="sm" type="dark" variant="danger" sticky>
         <!-- Titulo ou Logo da Aplicação -->
         <b-navbar-brand href="#">Bootstrap + Vue</b-navbar-brand>
 
