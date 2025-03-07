@@ -94,7 +94,16 @@ export default {
 
             } catch (error) {
                 // Caso ocorra um erro, exibe no console
-                console.error('Erro ao carregar dados: ',error);
+                if (error.response) {
+                    // A resposta foi recebida, mas o servidor respondeu com um status de erro
+                    console.error('Erro na resposta da API: ', error.response.data);
+                } else if (error.request) {
+                    // A requisição foi feita, mas nenhuma resposta foi recebida
+                    console.error('Nenhuma resposta recebida: ', error.request);
+                } else {
+                    // Algo aconteceu ao configurar a requisição que acionou um erro
+                    console.error('Erro ao configurar a requisição: ', error.message);
+                }
             }
         },
     
