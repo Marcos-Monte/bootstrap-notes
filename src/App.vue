@@ -1,11 +1,10 @@
 <template>
   <!-- 'b-container' ou div com a class '.container', define se estamos usando o bootstrap ou bootstrapvue -->
   <b-container fluid="md" class="d-flex flex-column justify-content-start p-0" id="app">
+    <!-- Import da NavBar|Header -->
     <Header />
-  <!-- <div class="container-md" id="app"> -->
-    <!-- Elemento, boostrapvue, de tabela que recebe a props indicando se os elementos mostrados serão ativos ou os inativos -->
-    <!-- <Table /> -->
 
+    <!-- Conteudo renderizado via Routes -->
     <router-view></router-view>
 
   <!-- </div> -->
@@ -27,7 +26,8 @@ export default {
 </script>
 
 <style>
- #app{
-  height: 100vh;
- }
+  #app{
+    height: 100vh;
+    width: 100vw;
+  }
 </style>
