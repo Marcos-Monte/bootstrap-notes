@@ -1,5 +1,6 @@
-// Imports 
+// Imports de Libs
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'; // Necessários para o funcionamento do bootstrap-vue
+// Imports de Componentes
 import Vue from 'vue';
 import App from './App.vue';
 
@@ -10,14 +11,18 @@ import router from './router';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+// Configuração do Vue
 Vue.config.productionTip = false
 
 // Disponibilizando o uso do Bootstrap-vue
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin)
 
-
+// Instanciando o Vue
 new Vue({
-  router, // Registrando o router globalmente
-  render: h => h(App),
+  // Registrando o router globalmente
+  router, 
+  // Render
+  render: h => h(App), 
+  // Montando o Vue
 }).$mount('#app')

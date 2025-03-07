@@ -15,7 +15,7 @@
             aria-controls="api-table"
         >
         <!-- Legenda de uma tabela, colocando a info 'caption-top' em 'b-table' a legenda fica no topo -->
-        <template #table-caption>Esses dados são importados da aplicação <a href="https://cadastro-gestantes.vercel.app/" target="_blank">Cadastro de Gestantes</a></template>
+        <template #table-caption>Esses dados são importados da aplicação <a href="https://cadastro-gestantes.vercel.app/cadastro" target="_blank">Cadastro de Gestantes</a></template>
 
         </b-table>
 

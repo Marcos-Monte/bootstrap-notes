@@ -15,7 +15,7 @@
             aria-controls="my-table"
         >
         <!-- Legenda de uma tabela, colocando a info 'caption-top' em 'b-table' a legenda fica no topo -->
-        <template #table-caption>Isto é uma legenda de tabela.</template>
+        <template #table-caption>Registros de exemplo armazenados localmente.</template>
 
         </b-table>
 
@@ -45,26 +45,27 @@
 </template>
 
 <script> 
-
+// Importando os items que serão renderizados na tela
 import items from '../data/registros';
 
 export default {
+    
     name: 'TableVue',
 
     data() {
         return {
             currentPage: 1, // variável que armazena a pagina atual
 
-            perPage: 2, // variavel que indica quantos items vão aparecer por pagina
+            perPage: 5, // variavel que indica quantos items vão aparecer por pagina
 
             isActives: true,
             
             fields: [ // Fields, são so 'dados'que serão renderizados na tela. Para colocar filtro, usar a propriedade 'sortable=true' 
-                { key: 'first_name', sortable: true },
+                { key: 'first_name', sortable: true, formatter: (value) => value.toUpperCase() },
                 { key: 'age', sortable: true },
                 { key: 'cpf', sortable: true },
             ],
-
+            // Items que serão renderizados na tela
             itemsTable: items,
             
         };
@@ -76,7 +77,7 @@ export default {
         activeItems(){
             return  this.itemsTable.filter(item => item.isActive === this.isActives)
         },
-
+        // Retorna o total de registros ativos
         rows() {
             console.log(this.activeItems.length)
             return this.activeItems.length
